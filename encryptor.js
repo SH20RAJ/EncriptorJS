@@ -7,7 +7,7 @@ const substitutionCipher = {
   alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ',
 
   // The substitution map that defines the mapping for each character in the alphabet
-  substitutionMap: 'xmbpcqsetnvwzorgadihfjlkuyXMBPCQSETNVWZORGADIHFJLKUY9876543210%',
+  substitutionMap: 'xmbpcqsetnvwzorgadihfjlkuyXMBPCQSETNVWZORGADIHFJLKUY9876543210 ',
 
   /**
    * Encrypts the given text using a substitution cipher.
