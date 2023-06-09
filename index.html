@@ -1,23 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncriptorJS</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    code {
+      background-color: #f8f9fa;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <div class="container">
+    <h1>EncriptorJS</h1>
 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+    <p>
+      EncriptorJS is a JavaScript text encryption library that allows you to securely encrypt and decrypt text. It provides
+      a simple interface to convert your text into an encrypted form and optionally add a key for additional security. Only
+      the correct key can be used to decrypt the text, ensuring that unauthorized access is prevented.
+    </p>
+
+    <h2>Installation</h2>
+
+    <p>You can use EncriptorJS by including the library in your JavaScript project or HTML file.</p>
+
+    <h3>In a JavaScript project</h3>
+
+    <ol>
+      <li>Download the EncriptorJS library file (<code>encriptor.js</code>) from the <a
+          href="https://github.com/sh20raj/EncriptorJS">GitHub repository</a>.</li>
+      <li>Move the <code>encriptor.js</code> file into your project directory.</li>
+      <li>In your JavaScript file, import the EncriptorJS library:</li>
+    </ol>
+
+    <pre><code>import Encriptor from './encriptor.js';
+    </code></pre>
+
+    <h3>In an HTML file</h3>
+
+    <ol>
+      <li>Download the EncriptorJS library file (<code>encriptor.js</code>) from the <a
+          href="https://github.com/sh20raj/encriptorjs">GitHub repository</a>.</li>
+      <li>Move the <code>encriptor.js</code> file into your project directory.</li>
+      <li>In your HTML file, add the following script tag:</li>
+    </ol>
+
+    <pre><code>&lt;script src="encriptor.js"&gt;&lt;/script&gt;
+    </code></pre>
+
+    <h3>or Using CDN</h3>
+
+    <pre><code>&lt;script src="https://encriptorjs.sh20raj.repl.co/encriptor.js"&gt;&lt;/script&gt;
+    </code></pre>
+
+    <h2>Usage</h2>
+
+    <p>Once you have included the EncriptorJS library in your project, you can start encrypting and decrypting text.</p>
+
+    <h3>Encrypting Text</h3>
+
+    <p>To encrypt text, use the <code>encrypt</code> method of the <code>Encriptor</code> object. Here's an example:</p>
+
+    <pre><code>const text = 'My name is Sh';
+const key = '1234';
+
+const encryptedText = Encriptor.encrypt(text, key);
+console.log(encryptedText); // Outputs :- 'Kcdew9zdYidBf'
+    </code></pre>
+
+    <p>The <code>encrypt</code> method takes two parameters: the <code>text</code> you want to encrypt and an optional
+      <code>key</code> for additional security. It is recommended to use only digits in the <code>key</code> parameter. It
+      returns the encrypted text.</p>
+
+    <h3>Decrypting Text</h3>
+
+    <p>To decrypt the encrypted text, use the <code>decrypt</code> method of the <code>Encriptor</code> object. Here's an
+      example:</p>
+
+    <pre><code>const encryptedText = 'Kcdew9zdYidBf'; // Replace with the encrypted text
+const key = '1234';
+const decryptedText = Encriptor.decrypt(encryptedText, key);
+console.log(decryptedText); // Output :- 'My name is Sh'
+    </code></pre>
+
+    <p>The <code>decrypt</code> method takes two parameters: the <code>encryptedText</code> you want to decrypt and the
+      <code>key</code> used during encryption. It returns the decrypted text.</p>
+
+    <h2>Examples</h2>
+
+    <p>You can find more examples in the <a href="https://replit.com/@SH20RAJ/EncriptorJS">examples</a> directory of this
+      repository. The examples demonstrate various use cases of the EncriptorJS library.</p>
+
+    <h2>License</h2>
+
+    <p>This project is licensed under the <a href="./LICENSE">MIT License</a>.</p>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
