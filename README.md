@@ -69,3 +69,9 @@ You can find more examples in the [examples](https://replit.com/@SH20RAJ/Encript
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+
+## Refrences 
+
+> https://dev.to/sh20raj/creating-a-custom-javascript-function-to-shuffle-strings-with-a-key-parameter-3c8a
+> 
+> https://chat.openai.com/share/3d0e44fe-963e-48d9-a5f0-547b5da11428
