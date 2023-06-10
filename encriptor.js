@@ -22,7 +22,7 @@ const substitutionCipher = {
       const index = this.alphabet.indexOf(char);
       if (index !== -1) {
         // Shuffle the substitution map using the key
-        const substitutionMap2 = shuffleString(this.substitutionMap, key);
+        const substitutionMap2 = this.shuffleString(this.substitutionMap, key);
         const encryptedChar = substitutionMap2[index];
         encryptedText += encryptedChar;
       } else {
@@ -44,7 +44,7 @@ const substitutionCipher = {
     for (let i = 0; i < encryptedText.length; i++) {
       const char = encryptedText[i];
       // Shuffle the substitution map using the key
-      const substitutionMap2 = shuffleString(this.substitutionMap, key);
+      const substitutionMap2 = this.shuffleString(this.substitutionMap, key);
       const index = substitutionMap2.indexOf(char);
       if (index !== -1) {
         const decryptedChar = this.alphabet[index];
@@ -54,16 +54,26 @@ const substitutionCipher = {
       }
     }
     return decryptedText;
-  }
-};
+  },
 
-/**
- * Shuffles the characters in the given string using a Fisher-Yates shuffle algorithm.
- * @param {string} text - The string to be shuffled.
- * @param {number} key - The optional key used as a seed for shuffling. Recommended to use digits only.
- * @returns {string} - The shuffled string.
- */
-function shuffleString(text, key = 20) {
+  fnv1a: function(text) {
+  const FNV_OFFSET_BASIS = 0x811C9DC5;
+  const FNV_PRIME = 0x01000193;
+
+  let hash = FNV_OFFSET_BASIS;
+
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash *= FNV_PRIME;
+  }
+
+  // Convert the hash to a hexadecimal string
+  hash = hash >>> 0; // Ensure unsigned 32-bit integer
+  hash = hash.toString(16).padStart(8, '0');
+
+  return hash;
+},
+  shuffleString: function(text, key = 20) {
   const array = text.split('');
   let seed = key;
   const random = () => {
@@ -77,7 +87,38 @@ function shuffleString(text, key = 20) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array.join('');
+},
+
+
+  
+  shuffle: function (inputString) {
+  // Convert the string into an array of characters
+  var charArray = inputString.split("");
+  
+  // Shuffle the array of characters
+  for (var i = charArray.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = charArray[i];
+    charArray[i] = charArray[j];
+    charArray[j] = temp;
+  }
+  
+  // Convert the shuffled array back into a string
+  var shuffledString = charArray.join("");
+  
+  return shuffledString;
 }
+
+
+};
+
+/**
+ * Shuffles the characters in the given string using a Fisher-Yates shuffle algorithm.
+ * @param {string} text - The string to be shuffled.
+ * @param {number} key - The optional key used as a seed for shuffling. Recommended to use digits only.
+ * @returns {string} - The shuffled string.
+ */
+
 
 // Expose the substitutionCipher object as Encriptor
 const Encriptor = substitutionCipher;
@@ -90,3 +131,16 @@ const Encriptor = substitutionCipher;
  *  - To encrypt text, use the `encrypt` method of the `Encriptor` object.
  *  - To decrypt text, use the `decrypt` method of the `Encriptor` object.
  */
+
+/* Additional security by using <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+const text = 'Hello, world!';
+const hash = sha256(text);
+console.log(hash); // Outputs the SHA-256 hash
+
+---
+
+btoa() /converts to base64
+atob() reverse function...
+
+*/

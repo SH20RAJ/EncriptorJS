@@ -39,10 +39,18 @@
       border-radius: 4px;
     }
   </style>
+<script src="encriptor.js"></script>
 </head>
 
 <body>
   <div class="container">
+        <h1>EncriptorJS Tool</h1>
+
+    <input type="text" placeholder="Enter Text" id="text"> </input> <button onclick='document.getElementById("code").value = Encriptor.encrypt(document.getElementById("text").value, document.getElementById("key").value)'>Encrypt</button>
+    <input type="number" id="key" placeholder="Key (20 by default)">
+    <button onclick='document.getElementById("text").value = Encriptor.decrypt(document.getElementById("code").value, document.getElementById("key").value)'>Decrypt</button>
+     <input type="text" placeholder="Enter Code" id="code"> </input>
+    <hr>
     <h1>EncriptorJS</h1>
 
     <p>

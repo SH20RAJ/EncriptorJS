@@ -18,15 +18,14 @@ You can use EncriptorJS by including the library in your JavaScript project or H
 
 ### In an HTML file
 
-1. Download the EncriptorJS library file (`encriptor.js`) from the [GitHub repository](https://github.com/sh20raj/encriptorjs).
+1. Download the EncriptorJS library file (`encriptor.js`) from the [GitHub repository](https://github.com/sh20raj/EncriptorJS).
 2. Move the `encriptor.js` file into your project directory.
 3. In your HTML file, add the following script tag:
 
    ```html
    <script src="encriptor.js"></script>
    ```
-### or Using CDN
-
+   or
    ```html
    <script src="https://encriptorjs.sh20raj.repl.co/encriptor.js"></script>
    ```
@@ -44,7 +43,7 @@ const text = 'My name is Sh';
 const key = '1234';
 
 const encryptedText = Encriptor.encrypt(text, key);
-console.log(encryptedText); // Outputs :- 'Kcdew9zdYidBf'
+console.log(encryptedText); // Outputs: 'Kcdew9zdYidBf'
 ```
 
 The `encrypt` method takes two parameters: the `text` you want to encrypt and an optional `key` for additional security. It is recommended to use only digits in the `key` parameter. It returns the encrypted text.
@@ -57,10 +56,26 @@ To decrypt the encrypted text, use the `decrypt` method of the `Encriptor` objec
 const encryptedText = 'Kcdew9zdYidBf'; // Replace with the encrypted text
 const key = '1234';
 const decryptedText = Encriptor.decrypt(encryptedText, key);
-console.log(decryptedText); // Output :- 'My name is Sh'
+console.log(decryptedText); // Outputs: 'My name is Sh'
 ```
 
 The `decrypt` method takes two parameters: the `encryptedText` you want to decrypt and the `key` used during encryption. It returns the decrypted text.
+
+### Shuffling Strings
+
+The EncriptorJS library also provides a utility function called `shuffleString` that can be used to shuffle strings using a key. Here's how you can use it:
+
+```javascript
+const text = 'Hello, World!';
+const shuffledText = Encriptor.shuffleString(text, 42);
+console.log(shuffledText); // Outputs a shuffled version of the input string
+```
+
+The `shuffleString` function takes a `text` parameter as the input string and an optional `key` parameter used to initialize the random number generator. By using the same key, you can obtain the same shuffled result. This function can be used for encryption purposes or to shuffle strings for other applications.
+
+Please note that the `shuffleString` function alone does not provide strong encryption. For secure encryption, it is recommended to use well-established encryption algorithms and libraries designed for that purpose.
+
+`Encriptor.shuffle(text)` always gives different shuffled pattern.
 
 ## Examples
 
@@ -69,6 +84,9 @@ You can find more examples in the [examples](https://replit.com/@SH20RAJ/Encript
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+
+
+Feel free to copy and paste this updated version into your README.md file, which includes the `Encriptor.shuffleString()` function documentation.
 
 ## Refrences 
 
