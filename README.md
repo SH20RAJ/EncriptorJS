@@ -92,4 +92,4 @@ Feel free to copy and paste this updated version into your README.md file, which
 
 > https://dev.to/sh20raj/creating-a-custom-javascript-function-to-shuffle-strings-with-a-key-parameter-3c8a
 > 
-> https://chat.openai.com/share/3d0e44fe-963e-48d9-a5f0-547b5da11428
+> [comment]: <> ([This is a comment, it will not be included](https://chat.openai.com/share/3d0e44fe-963e-48d9-a5f0-547b5da11428))
