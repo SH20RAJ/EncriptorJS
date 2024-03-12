@@ -12,13 +12,16 @@ You can use EncriptorJS by including the library in your JavaScript project or H
 2. Move the `encriptor.js` file into your project directory.
 3. In your JavaScript file, import the EncriptorJS library:
 
-   ```
-   npm i encriptorjs
-   ```
 
-   ```javascript
-   import Encriptor from encriptorjs';
-   ```
+```javascript
+   import Encriptor from './encriptor.js';
+```
+or Use
+
+
+```bash
+npm i encriptorjs
+```
 
 ### In an HTML file
 
