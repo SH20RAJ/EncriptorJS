@@ -12,13 +12,17 @@ You can use EncriptorJS by including the library in your JavaScript project or H
 2. Move the `encriptor.js` file into your project directory.
 3. In your JavaScript file, import the EncriptorJS library:
 
+   ```
+   npm i encriptorjs
+   ```
+
    ```javascript
-   import Encriptor from './encriptor.js';
+   import Encriptor from encriptorjs';
    ```
 
 ### In an HTML file
 
-1. Download the EncriptorJS library file (`encriptor.js`) from the [GitHub repository](https://github.com/sh20raj/EncriptorJS).
+1. Download the EncriptorJS library file (`encriptor.js`) from the [GitHub repository](https://github.com/sh20raj/EncriptorJS) or [NPMJS](https://www.npmjs.com/package/encriptorjs).
 2. Move the `encriptor.js` file into your project directory.
 3. In your HTML file, add the following script tag:
 
@@ -27,7 +31,7 @@ You can use EncriptorJS by including the library in your JavaScript project or H
    ```
    or
    ```html
-   <script src="https://encriptorjs.sh20raj.repl.co/encriptor.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/EncriptorJS@main/encriptor.min.js"></script>
    ```
 
 ## Usage
