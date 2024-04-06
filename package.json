@@ -1,0 +1,23 @@
+{
+    "name": "encriptorjs",
+    "version": "1.0.2",
+    "description": "JavaScript text encryption library for secure encryption and decryption.",
+    "main": "encriptor.module.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"No tests specified\""
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sh20raj/encriptorjs.git"
+    },
+    "keywords": ["encryption", "decryption", "security", "sh20raj"],
+    "author": "SH20RAJ",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/sh20raj/encriptorjs/issues"
+    },
+    "homepage": "https://github.com/sh20raj/encriptorjs",
+    "dependencies": {}
+  }
+  

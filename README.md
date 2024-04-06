@@ -17,7 +17,7 @@ You can use EncriptorJS by including the library in your JavaScript project or H
 
 
 ```javascript
-   import Encriptor from './encriptor.js';
+   import Encriptor from './encriptor.module.js';
 ```
 or Use
 
