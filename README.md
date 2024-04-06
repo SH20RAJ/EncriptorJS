@@ -26,6 +26,10 @@ or Use
 npm i encriptorjs
 ```
 
+```javascript
+   import Encriptor from 'encriptorjs';
+```
+
 ### In an HTML file
 
 1. Download the EncriptorJS library file (`encriptor.js`) from the [GitHub repository](https://github.com/sh20raj/EncriptorJS) or [NPMJS](https://www.npmjs.com/package/encriptorjs).
@@ -95,11 +99,7 @@ You can find more examples in the [examples](https://replit.com/@SH20RAJ/Encript
 
 This project is licensed under the [MIT License](./LICENSE).
 
-
-Feel free to copy and paste this updated version into your README.md file, which includes the `Encriptor.shuffleString()` function documentation.
-
 ## Refrences 
 
 > https://dev.to/sh20raj/creating-a-custom-javascript-function-to-shuffle-strings-with-a-key-parameter-3c8a
-> 
-> [comment]: <> (https://chat.openai.com/share/3d0e44fe-963e-48d9-a5f0-547b5da11428)
+> https://dev.to/sh20raj/introducing-encriptorjs-secure-text-encryption-and-decryption-in-javascript-a-jwt-easy-to-use-alternative-l02
