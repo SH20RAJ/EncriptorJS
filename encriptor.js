@@ -122,7 +122,9 @@ const substitutionCipher = {
 
 // Expose the substitutionCipher object as Encriptor
 const Encriptor = substitutionCipher;
-
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Encriptor;
+}
 /**
  * EncriptorJS is a JavaScript text encryption library that allows users to encrypt and decrypt text using a substitution cipher.
  * It provides an additional layer of security by allowing users to add a key (preferably consisting of digits) during encryption and decryption.
