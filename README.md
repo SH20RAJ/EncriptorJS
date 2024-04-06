@@ -1,5 +1,8 @@
 # EncriptorJS
 
+[![](https://data.jsdelivr.com/v1/package/gh/sh20raj/EncriptorJS/badge)](https://www.jsdelivr.com/package/gh/sh20raj/EncriptorJS)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2FEncriptorJS%2F&labelColor=%23f47373&countColor=%23dce775&style=flat)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2FEncriptorJS%2F)
+
 EncriptorJS is a JavaScript text encryption library that allows you to securely encrypt and decrypt text. It provides a simple interface to convert your text into an encrypted form and optionally add a key for additional security. Only the correct key can be used to decrypt the text, ensuring that unauthorized access is prevented.
 
 ## Installation
