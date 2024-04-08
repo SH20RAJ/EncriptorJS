@@ -1,5 +1,6 @@
 # EncriptorJS
 
+[![npm version](https://badge.fury.io/js/encriptorjs.svg)](https://badge.fury.io/js/encriptorjs)
 [![](https://data.jsdelivr.com/v1/package/gh/sh20raj/EncriptorJS/badge)](https://www.jsdelivr.com/package/gh/sh20raj/EncriptorJS)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2FEncriptorJS%2F&labelColor=%23f47373&countColor=%23dce775&style=flat)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2FEncriptorJS%2F)
 
